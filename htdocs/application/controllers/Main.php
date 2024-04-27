@@ -4,7 +4,7 @@
 
 class Main extends CI_Controller
 {
-
+	#[\ReturnTypeWillChange]
     public function __construct()
     {
         parent::__construct();

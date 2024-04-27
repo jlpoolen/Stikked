@@ -565,7 +565,8 @@ class CI_Input {
 				$which = FILTER_FLAG_IPV6;
 				break;
 			default:
-				$which = NULL;
+				//$which = NULL;  // 2/22/2023 jlpoole below is hack to bypass warning
+				$which = FILTER_FLAG_IPV4;
 				break;
 		}
 

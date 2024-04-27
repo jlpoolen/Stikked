@@ -87,7 +87,7 @@ abstract class CI_Session_driver implements SessionHandlerInterface {
 	protected $_success, $_failure;
 
 	// ------------------------------------------------------------------------
-
+        #[\ReturnTypeWillChange] 
 	/**
 	 * Class constructor
 	 *

@@ -60,7 +60,7 @@ class CI_Session {
 	protected $_sid_regexp;
 
 	// ------------------------------------------------------------------------
-
+        #[\ReturnTypeWillChange]
 	/**
 	 * Class constructor
 	 *

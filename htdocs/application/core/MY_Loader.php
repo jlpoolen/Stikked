@@ -1,7 +1,7 @@
 <?php if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
-
+#[AllowDynamicProperties]
 class MY_Loader extends CI_Loader
 {
 
