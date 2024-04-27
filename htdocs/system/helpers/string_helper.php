@@ -116,7 +116,11 @@ if ( ! function_exists('strip_quotes'))
 	 */
 	function strip_quotes($str)
 	{
-		return str_replace(array('"', "'"), '', $str);
+//		return str_replace(array('"', "'"), '', $str);
+//
+// 4/26/24 jlpoole: fix deprecation warning re: NULL string
+//
+		return str_replace(array('"', "'"), '', $str) ?? '';
 	}
 }
 
