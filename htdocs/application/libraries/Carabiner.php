@@ -347,7 +347,7 @@ class Carabiner {
 					$m = (isset($file[3])) ? $file[3] : $minify;
 					$g = (isset($file[4])) ? $file[4] : $group;
 					
-					$this->_asset('js', $d, $p, $c, $m, NULL, $g);
+					$this->_asset('js', $d, $m, $c, $p, NULL, $g);
 				
 				}
 				
@@ -359,13 +359,13 @@ class Carabiner {
 				$m = (isset($dev_file[3])) ? $dev_file[3] : $minify;
 				$g = (isset($dev_file[4])) ? $dev_file[4] : $group;
 				
-				$this->_asset('js', $d, $p, $c, $m, NULL, $g);
+				$this->_asset('js', $d, $m, $c, $p, NULL, $g);
 				
 			}
 
 		}else{
 		
-			$this->_asset('js', $dev_file, $prod_file, $combine, $minify, NULL, $group);
+			$this->_asset('js', $dev_file, $minify, $combine, $prod_file, NULL, $group);
 
 		}
 	}
@@ -399,7 +399,7 @@ class Carabiner {
 					$y = (isset($file[4])) ? $file[4] : $minify;
 					$g = (isset($file[5])) ? $file[5] : $group;
 
-					$this->_asset('css', $d, $p, $c, $y, $m, $g);
+					$this->_asset('css', $d, $y, $c, $m, $m, $g);
 				
 				}
 				
@@ -412,13 +412,13 @@ class Carabiner {
 				$y = (isset($dev_file[4])) ? $dev_file[4] : $minify;
 				$g = (isset($dev_file[5])) ? $dev_file[5] : $group;
 									
-				$this->_asset('css', $d, $p, $c, $y, $m, $g);
+				$this->_asset('css', $d, $y, $c, $p, $m, $g);
 				
 			}
 			
 		}else{
 		
-			$this->_asset('css', $dev_file, $prod_file, $combine, $minify, $media, $group);
+			$this->_asset('css', $dev_file, $minify, $combine, $prod_file, $media, $group);
 	
 		}
 	}
@@ -461,7 +461,7 @@ class Carabiner {
 	* @param	String of the group name with which the asset is to be associated. NOT REQUIRED
 	* @return   Void
 	*/		
-	private function _asset($type, $dev_file, $prod_file = '', $combine, $minify, $media = 'screen', $group = 'main')
+	private function _asset($type, $dev_file, $minify, $combine, $prod_file = '', $media = 'screen', $group = 'main')
 	{
 		if ($type == 'css') : 
 		
